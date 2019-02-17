@@ -102,7 +102,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -291,7 +291,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/16/Trump/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chien-Tung">
+      <meta itemprop="name" content="Chien-Tung Gao">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -351,7 +351,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  125
+                  644
                 </span>
               
 
@@ -367,7 +367,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -394,6 +394,15 @@
 <p>以下摘自《Trump自述》：</p>
 <ul>
 <li>有一位作家在描述人生旅程时曾经说过：“此地无人生还。”</li>
+<li>人生教会了我一点，那就是不要长时间地限于消极沮丧的状态。你如果有些不如意或是想抱怨几分钟，这都是人之常情，谁都可以理解。但是，我们不应该长时间地笼罩在消极情绪之中。</li>
+<li>关注解决之道，而不要抱怨出现的问题。</li>
+<li>我见过一些人成天笼罩在失败的阴云之下，最糟糕的情况就是你认为厄运是你的宿命。其实不然。其实造成我们眼下局面的并非智商或是运气，而是在面对困境时的勇气。</li>
+<li>有些人把困难看做是运气不好，我就不这么看。困难时人生必不可少的一部分，也是生意的重要一部分。</li>
+<li>你的生意做得越大，你的人生境界越高，那么你所遭遇的困难也会更具挑战性。如果你有这样的思想准备，那么在遇到困难时自己的情绪波动就不会太大，也不会无畏地烦恼甚至积郁成疾了。</li>
+<li>我父亲经常说“对你所做的事要做到无所不知”。</li>
+<li>我还记得有位朋友问我为什么会举办这么多慈善活动，他对我的做法感到不解，因为他觉得举办这么多公益活动没有必要，而且需要耗费大量的时间。我对他说“因为我做得到。”我跟你说实话，这句话是很有分量的，而且也能照亮我继续前行的路。想想自己能对别人说“因为我能做到”，这种感觉真的很棒。</li>
+<li>事先对会出现的困难做好准备对你自己是有利的，因为当困难真的降临之后你就不会茫然失措了。<strong>如果有必要的话，你不妨每天都这样提醒自己一番。</strong></li>
+<li>如果你想要成就一番大事业，必须要有坚韧不拔的毅力去克服前进道路上的困难。</li>
 </ul>
 
           
@@ -471,7 +480,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">Chien-Tung</p>
+              <p class="site-author-name" itemprop="name">Chien-Tung Gao</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -495,7 +504,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -536,7 +545,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Chien-Tung</span>
+  <span class="author" itemprop="copyrightHolder">Chien-Tung Gao</span>
 
   
     <span class="post-meta-divider">|</span>
@@ -546,7 +555,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">125</span>
+    <span title="Site words total count">644</span>
   
 </div>
 
@@ -573,6 +582,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -715,7 +726,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
@@ -1041,6 +1052,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
